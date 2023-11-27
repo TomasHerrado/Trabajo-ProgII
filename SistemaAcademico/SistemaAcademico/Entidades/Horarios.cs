@@ -8,21 +8,21 @@ namespace SistemaAcademico.Entidades
 {
     public class Horarios
     {
-        private int id_horarios;
-        private string dia_semana;
+        private int idHorarios;
+        private string diaSemana;
         private string hora_inicio;
         private string hora_fin;
         private int aula;
 
         public int IdHorarios
         {
-            get { return id_horarios; }
-            set { id_horarios = value; }
+            get { return idHorarios; }
+            set { idHorarios = value; }
         }
         public string DiaSemana
         {
-            get { return dia_semana; }
-            set { dia_semana = value; }
+            get { return diaSemana; }
+            set { diaSemana = value; }
         }
         public string HoraInicio
         {
@@ -41,8 +41,8 @@ namespace SistemaAcademico.Entidades
         }
         public Horarios()
         {
-            id_horarios = 0;
-            dia_semana = "";
+            idHorarios = 0;
+            diaSemana = "";
             hora_inicio = "";
             hora_fin = "";
             aula = 0;

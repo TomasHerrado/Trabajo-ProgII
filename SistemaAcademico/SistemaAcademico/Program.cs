@@ -1,4 +1,5 @@
-﻿using SistemaAcademico.Servicios;
+﻿using SistemaAcademico.Presentacion;
+using SistemaAcademico.Servicios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace SistemaAcademico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(new IFabricaServicio()));
+            Application.Run(new Login(new IFabricaServicio()));
         }
     }
 }

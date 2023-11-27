@@ -8,31 +8,31 @@ namespace SistemaAcademico.Entidades
 {
     public class Comisiones
     {
-        private int id_comisiones;
-        private string descripcion;
+        private int idComision;
+        private string descripcionComision;
 
-        public int IdComisiones
+        public int IdComision
         {
-            get { return id_comisiones; }
-            set { id_comisiones = value; }
+            get { return idComision; }
+            set { idComision = value; }
         }
 
-        public string Descripcion
+        public string DescripcionComision
         {
-            get { return descripcion; }
-            set { descripcion = value; }
+            get { return descripcionComision; }
+            set { descripcionComision = value; }
         }
 
-        public Comisiones(int id_comisiones, string descripcion)
-        {
+        public Comisiones(int id_comision, string descripcion)
+        {   
             
-            IdComisiones = id_comisiones;
-            Descripcion = descripcion;
+            IdComision = id_comision;
+            DescripcionComision = descripcion;
         }
         public Comisiones()
         {
-            id_comisiones = 0;
-            descripcion = "";
+            idComision = 0;
+            descripcionComision = "";
         }
     }
 }

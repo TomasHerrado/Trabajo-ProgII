@@ -56,7 +56,25 @@ namespace SistemaAcademico.Datos
             conexion.Close();
             return tabla;
         }
+        public DataTable ConsultaSQL(string spNombre, List<Parametro> values)
+        {
+            DataTable tabla = new DataTable();
 
+            conexion.Open();
+            SqlCommand cmd = new SqlCommand(spNombre, conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+            if (values != null)
+            {
+                foreach (Parametro oParametro in values)
+                {
+                    cmd.Parameters.AddWithValue(oParametro.Nombre, oParametro.Valor);
+                }
+            }
+            tabla.Load(cmd.ExecuteReader());
+            conexion.Close();
+
+            return tabla;
+        }
         public SqlConnection ObtenerConexion()
         {
             return this.conexion;

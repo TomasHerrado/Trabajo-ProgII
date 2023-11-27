@@ -74,7 +74,7 @@ namespace SistemaAcademico.Entidades
         public string SitLaboral
         {
             get { return sit_laboral; }
-            set { SitLaboral = value; }
+            set { sit_laboral = value; }
         }
 
         public Estudiantes( int id_estuidante, string nombre, string apellido, DateTime fecha_nac, int dni, string direccion, int telefono, string email,string estado_civil,string sit_habitacional,string sit_laboral)
@@ -103,8 +103,11 @@ namespace SistemaAcademico.Entidades
             Email = "";
             SitHabitacional = "";
             sit_laboral = "";
+            
         }
-
+        
+        
+        
 
     }
 

@@ -61,7 +61,7 @@ namespace SistemaAcademico.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Data Source=HERRADO\SQLEXPRESS;Initial Catalog=Sistema_Academico;Integrated Security=True.
+        ///   Looks up a localized string similar to Data Source=HERRADO\SQLEXPRESS;Initial Catalog=Sistema_Academico2;Integrated Security=True.
         /// </summary>
         internal static string CadenaConexion {
             get {

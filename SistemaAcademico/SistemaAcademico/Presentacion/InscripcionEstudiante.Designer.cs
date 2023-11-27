@@ -45,6 +45,11 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColApe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAccion = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiante)).BeginInit();
             this.SuspendLayout();
@@ -170,13 +175,23 @@
             // 
             // dgvEstudiante
             // 
+            this.dgvEstudiante.AllowUserToAddRows = false;
+            this.dgvEstudiante.AllowUserToDeleteRows = false;
             this.dgvEstudiante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstudiante.Location = new System.Drawing.Point(506, 94);
+            this.dgvEstudiante.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColNombre,
+            this.ColApe,
+            this.ColNac,
+            this.ColDni,
+            this.ColAccion});
+            this.dgvEstudiante.Location = new System.Drawing.Point(471, 94);
             this.dgvEstudiante.Name = "dgvEstudiante";
+            this.dgvEstudiante.ReadOnly = true;
             this.dgvEstudiante.RowHeadersWidth = 62;
             this.dgvEstudiante.RowTemplate.Height = 28;
-            this.dgvEstudiante.Size = new System.Drawing.Size(567, 279);
+            this.dgvEstudiante.Size = new System.Drawing.Size(628, 279);
             this.dgvEstudiante.TabIndex = 17;
+            this.dgvEstudiante.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstudiante_CellContentClick);
             // 
             // btnAgregar
             // 
@@ -196,6 +211,7 @@
             this.btnAceptar.TabIndex = 19;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -205,6 +221,47 @@
             this.btnCancelar.TabIndex = 20;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // ColNombre
+            // 
+            this.ColNombre.HeaderText = "Nombre";
+            this.ColNombre.MinimumWidth = 8;
+            this.ColNombre.Name = "ColNombre";
+            this.ColNombre.ReadOnly = true;
+            this.ColNombre.Width = 150;
+            // 
+            // ColApe
+            // 
+            this.ColApe.HeaderText = "Apellido";
+            this.ColApe.MinimumWidth = 8;
+            this.ColApe.Name = "ColApe";
+            this.ColApe.ReadOnly = true;
+            this.ColApe.Width = 150;
+            // 
+            // ColNac
+            // 
+            this.ColNac.HeaderText = "Nacimiento";
+            this.ColNac.MinimumWidth = 8;
+            this.ColNac.Name = "ColNac";
+            this.ColNac.ReadOnly = true;
+            this.ColNac.Width = 150;
+            // 
+            // ColDni
+            // 
+            this.ColDni.HeaderText = "Dni";
+            this.ColDni.MinimumWidth = 8;
+            this.ColDni.Name = "ColDni";
+            this.ColDni.ReadOnly = true;
+            this.ColDni.Width = 150;
+            // 
+            // ColAccion
+            // 
+            this.ColAccion.HeaderText = "Acciones";
+            this.ColAccion.MinimumWidth = 8;
+            this.ColAccion.Name = "ColAccion";
+            this.ColAccion.ReadOnly = true;
+            this.ColAccion.Width = 150;
             // 
             // InscripcionEstudiante
             // 
@@ -245,5 +302,10 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColApe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDni;
+        private System.Windows.Forms.DataGridViewButtonColumn ColAccion;
     }
 }

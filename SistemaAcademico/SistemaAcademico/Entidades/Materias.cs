@@ -8,19 +8,19 @@ namespace SistemaAcademico.Entidades
 {
     public class Materias
     {
-        private int id_materia;
-        private string nombre;
+        private int idMateria;
+        private string nombreMateria;
         private Carrera id_carrera;
 
         public int IdMateria
         {
-            get { return id_materia; }
-            set { id_materia = value;}
+            get { return idMateria; }
+            set { idMateria = value;}
         }
-        public string Nombre
+        public string NombreMateria
         {
-            get { return nombre; }
-            set { nombre = value; }
+            get { return nombreMateria; }
+            set { nombreMateria = value; }
         }
         public Carrera IdCarrera
         {
@@ -29,14 +29,14 @@ namespace SistemaAcademico.Entidades
         }
         public Materias()
         {
-            id_materia = 0;
-            nombre = string.Empty;
+            idMateria = 0;
+            nombreMateria = string.Empty;
             id_carrera = new Carrera();
         }
         public Materias(int id_materia, string nombre, Carrera id_carrera)
         {
             IdMateria = id_materia;
-            Nombre = nombre;
+            NombreMateria = nombre;
             IdCarrera = id_carrera;
         }
     }

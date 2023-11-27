@@ -1,4 +1,6 @@
-﻿using SistemaAcademico.Servicios;
+﻿using SistemaAcademico.Entidades;
+using SistemaAcademico.Presentacion;
+using SistemaAcademico.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +39,24 @@ namespace SistemaAcademico
             {
                 this.Close();
             }
+        }
+
+        private void nuevaInscripcionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Presentacion.InstripcionMateria nuevo = new Presentacion.InstripcionMateria(fabrica);
+            nuevo.ShowDialog();
+        }
+
+        private void consultarMateriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultarMateria nuevo=new ConsultarMateria(fabrica);
+            nuevo.ShowDialog();
+        }
+
+        private void infoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAcercaDe nuevo = new FormAcercaDe();
+            nuevo.ShowDialog();
         }
     }
 }

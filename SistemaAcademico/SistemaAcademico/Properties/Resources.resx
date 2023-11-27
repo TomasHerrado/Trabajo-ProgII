@@ -118,6 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CadenaConexion" xml:space="preserve">
-    <value>Data Source=HERRADO\SQLEXPRESS;Initial Catalog=Sistema_Academico;Integrated Security=True</value>
+    <value>Data Source=HERRADO\SQLEXPRESS;Initial Catalog=Sistema_Academico2;Integrated Security=True</value>
   </data>
 </root>

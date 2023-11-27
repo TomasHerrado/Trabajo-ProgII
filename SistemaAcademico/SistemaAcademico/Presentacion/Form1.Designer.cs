@@ -35,6 +35,7 @@
             this.nuevoEstudianteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transaccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaInscripcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarMateriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calificacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,7 +70,7 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(147, 34);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -91,7 +92,8 @@
             // transaccionToolStripMenuItem
             // 
             this.transaccionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevaInscripcionToolStripMenuItem});
+            this.nuevaInscripcionToolStripMenuItem,
+            this.consultarMateriasToolStripMenuItem});
             this.transaccionToolStripMenuItem.Name = "transaccionToolStripMenuItem";
             this.transaccionToolStripMenuItem.Size = new System.Drawing.Size(118, 29);
             this.transaccionToolStripMenuItem.Text = "Transaccion";
@@ -101,6 +103,14 @@
             this.nuevaInscripcionToolStripMenuItem.Name = "nuevaInscripcionToolStripMenuItem";
             this.nuevaInscripcionToolStripMenuItem.Size = new System.Drawing.Size(263, 34);
             this.nuevaInscripcionToolStripMenuItem.Text = "Inscripcion Materia";
+            this.nuevaInscripcionToolStripMenuItem.Click += new System.EventHandler(this.nuevaInscripcionToolStripMenuItem_Click);
+            // 
+            // consultarMateriasToolStripMenuItem
+            // 
+            this.consultarMateriasToolStripMenuItem.Name = "consultarMateriasToolStripMenuItem";
+            this.consultarMateriasToolStripMenuItem.Size = new System.Drawing.Size(263, 34);
+            this.consultarMateriasToolStripMenuItem.Text = "Consultar Materias";
+            this.consultarMateriasToolStripMenuItem.Click += new System.EventHandler(this.consultarMateriasToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -127,8 +137,9 @@
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(146, 34);
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.infoToolStripMenuItem.Text = "Info";
+            this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -159,6 +170,7 @@
         private System.Windows.Forms.ToolStripMenuItem calificacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarMateriasToolStripMenuItem;
     }
 }
 
