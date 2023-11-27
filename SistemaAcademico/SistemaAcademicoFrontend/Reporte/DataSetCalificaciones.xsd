@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetCalificaciones" targetNamespace="http://tempuri.org/DataSetCalificaciones.xsd" xmlns:mstns="http://tempuri.org/DataSetCalificaciones.xsd" xmlns="http://tempuri.org/DataSetCalificaciones.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=HERRADO\SQLEXPRESS;Initial Catalog=Sistema_Academico2;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="herrado\sqlexpress.Sistema_Academico2.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="herrado\sqlexpress.Sistema_Academico2.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Calificaciones.nota, Tipo_Notas.descripcion_tipo, Estados_Materias.nombre_estado_materia, Materias.nombre_materia, Estudiantes.nombre_estudiante, Estudiantes.apellido_estudiante, Estudiantes.dni
+FROM   Calificaciones INNER JOIN
+             Inscripcion_Materias ON Calificaciones.id_inscripcion = Inscripcion_Materias.id_inscripcion INNER JOIN
+             Catedras ON Inscripcion_Materias.id_catedra = Catedras.id_catedra INNER JOIN
+             Estudiantes ON Inscripcion_Materias.id_estudiante = Estudiantes.id_estudiante INNER JOIN
+             Materias ON Catedras.id_materia = Materias.id_materia INNER JOIN
+             Tipo_Notas ON Calificaciones.id_tipo_nota = Tipo_Notas.id_tipo_nota INNER JOIN
+             Estados_Materias ON Inscripcion_Materias.id_estado_materia = Estados_Materias.id_estado_materia</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nota" DataSetColumn="nota" />
+              <Mapping SourceColumn="nombre_estudiante" DataSetColumn="nombre_estudiante" />
+              <Mapping SourceColumn="apellido_estudiante" DataSetColumn="apellido_estudiante" />
+              <Mapping SourceColumn="dni" DataSetColumn="dni" />
+              <Mapping SourceColumn="descripcion_tipo" DataSetColumn="descripcion_tipo" />
+              <Mapping SourceColumn="nombre_estado_materia" DataSetColumn="nombre_estado_materia" />
+              <Mapping SourceColumn="nombre_materia" DataSetColumn="nombre_materia" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetCalificaciones" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetCalificaciones" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetCalificaciones">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nota" msprop:Generator_ColumnPropNameInTable="notaColumn" msprop:Generator_ColumnPropNameInRow="nota" msprop:Generator_UserColumnName="nota" msprop:Generator_ColumnVarNameInTable="columnnota" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre_estudiante" msprop:Generator_ColumnPropNameInTable="nombre_estudianteColumn" msprop:Generator_ColumnPropNameInRow="nombre_estudiante" msprop:Generator_UserColumnName="nombre_estudiante" msprop:Generator_ColumnVarNameInTable="columnnombre_estudiante" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="apellido_estudiante" msprop:Generator_ColumnPropNameInTable="apellido_estudianteColumn" msprop:Generator_ColumnPropNameInRow="apellido_estudiante" msprop:Generator_UserColumnName="apellido_estudiante" msprop:Generator_ColumnVarNameInTable="columnapellido_estudiante" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dni" msprop:Generator_ColumnPropNameInTable="dniColumn" msprop:Generator_ColumnPropNameInRow="dni" msprop:Generator_UserColumnName="dni" msprop:Generator_ColumnVarNameInTable="columndni" type="xs:int" minOccurs="0" />
+              <xs:element name="descripcion_tipo" msprop:Generator_ColumnPropNameInTable="descripcion_tipoColumn" msprop:Generator_ColumnPropNameInRow="descripcion_tipo" msprop:Generator_UserColumnName="descripcion_tipo" msprop:Generator_ColumnVarNameInTable="columndescripcion_tipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_estado_materia" msprop:Generator_ColumnPropNameInTable="nombre_estado_materiaColumn" msprop:Generator_ColumnPropNameInRow="nombre_estado_materia" msprop:Generator_UserColumnName="nombre_estado_materia" msprop:Generator_ColumnVarNameInTable="columnnombre_estado_materia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_materia" msprop:Generator_ColumnPropNameInTable="nombre_materiaColumn" msprop:Generator_ColumnPropNameInRow="nombre_materia" msprop:Generator_UserColumnName="nombre_materia" msprop:Generator_ColumnVarNameInTable="columnnombre_materia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
